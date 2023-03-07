@@ -1,12 +1,12 @@
 # Telecom-customer-churn-analysis-and-prediction
 In this project, you will analyse customer-level data of a leading telecom firm, build predictive models to identify customers at high risk of churn and identify the main indicators of churn.
-Business Problem Overview
+# Business Problem Overview
 In the telecom industry, customers are able to choose from multiple service providers and actively switch from one operator to another. In this highly competitive market, the telecommunications industry experiences an average of 15-25% annual churn rate. Given the fact that it costs 5-10 times more to acquire a new customer than to retain an existing one, customer retention has now become even more important than customer acquisition.
 
 For many incumbent operators, retaining high profitable customers is the number one business goal.
 
 To reduce customer churn, telecom companies need to predict which customers are at high risk of churn.
-Understanding and Defining Churn
+#Understanding and Defining Churn
 There are two main models of payment in the telecom industry - postpaid (customers pay a monthly/annual bill after using the services) and prepaid (customers pay/recharge with a certain amount in advance and then use the services).
 
 In the postpaid model, when customers want to switch to another operator, they usually inform the existing operator to terminate the services, and you directly know that this is an instance of churn.
@@ -17,28 +17,29 @@ Thus, churn prediction is usually more critical (and non-trivial) for prepaid cu
 
 This project is based on the Indian and Southeast Asian market.
 
-Definitions of Churn
+#Definitions of Churn
 There are various ways to define churn, such as: Revenue-based churn: Customers who have not utilised any revenue-generating facilities such as mobile internet, outgoing calls, SMS etc. over a given period of time. One could also use aggregate metrics such as ‘customers who have generated less than INR 4 per month in total/average/median revenue’.
 
 The main shortcoming of this definition is that there are customers who only receive calls/SMSes from their wage-earning counterparts, i.e. they don’t generate revenue but use the services. For example, many users in rural areas only receive calls from their wage-earning siblings in urban areas.
 
-Usage-based churn: Customers who have not done any usage, either incoming or outgoing - in terms of calls, internet etc. over a period of time.
+#Usage-based churn: 
+Customers who have not done any usage, either incoming or outgoing - in terms of calls, internet etc. over a period of time.
 
 A potential shortcoming of this definition is that when the customer has stopped using the services for a while, it may be too late to take any corrective actions to retain them. For e.g., if you define churn based on a ‘two-months zero usage’ period, predicting churn could be useless since by that time the customer would have already switched to another operator.
 
 In this project, you will use the usage-based definition to define churn.
 
-High-value Churn
+#High-value Churn
 In the Indian and the southeast Asian market, approximately 80% of revenue comes from the top 20% customers (called high-value customers). Thus, if we can reduce churn of the high-value customers, we will be able to reduce significant revenue leakage.
 
 In this project, you will define high-value customers based on a certain metric (mentioned later below) and predict churn only on high-value customers.
 
-Understanding the Business Objective and the Data
+#Understanding the Business Objective and the Data
 The dataset contains customer-level information for a span of four consecutive months - June, July, August and September. The months are encoded as 6, 7, 8 and 9, respectively.
 
 The business objective is to predict the churn in the last (i.e. the ninth) month using the data (features) from the first three months. To do this task well, understanding the typical customer behaviour during churn will be helpful.
 
-Understanding Customer Behaviour During Churn
+#Understanding Customer Behaviour During Churn
 Customers usually do not decide to switch to another competitor instantly, but rather over a period of time (this is especially applicable to high-value customers). In churn prediction, we assume that there are three phases of customer lifecycle :
 
 The ‘good’ phase: In this phase, the customer is happy with the service and behaves as usual.
@@ -52,7 +53,7 @@ The data dictionary contains meanings of abbreviations. Some frequent ones are l
 
 The attributes containing 6, 7, 8, 9 as suffixes imply that those correspond to the months 6, 7, 8, 9 respectively.
 
-Solution
+#Solution
 From the above problem statement, it's clear that it will be a Binary Classification problem.
 
 The solution is developed using Python Jupyter Notebook. It is classified into two models as follows:
@@ -61,32 +62,32 @@ Model 1: It will be used to predict whether a high-value customer will churn or 
 
 Model 2: It will be used to identify important variables that are strong predictors of churn. These variables may also indicate why customers choose to switch to other networks.
 
-The solution code is divided into the following sections:
+#The solution code is divided into the following sections:
 
-Data understanding
+#Data understanding
 
-Preprocessing
+#Preprocessing
 
-EDA
+#EDA
 
-Handle missing values
+#Handle missing values
 
-Feature Engineering
+#Feature Engineering
 
-Model 1 - Customer Churn Prediction
+#Model 1 - Customer Churn Prediction
 
-Feature Selection and Dimensionality Reduction using PCA
-Handling Class Imbalance using ADASYN
-Baseline Model building
-Cross validation
-Hyperparameter tuning
-Model Evaluation
-Model Selection
-Model 2 - Identifying Strong Predictors of churn (Important features)
+#Feature Selection and Dimensionality Reduction using PCA
+#Handling Class Imbalance using ADASYN
+#Baseline Model building
+#Cross validation
+#Hyperparameter tuning
+#Model Evaluation
+#Model Selection
+#Model 2 - Identifying Strong Predictors of churn (Important features)
 
-Feature Selection using ExtraTreesClassifier
-Handling Class Imbalance using ADASYN
-Model building
-Hyperparameter tuning with Cross Validation
-Model Evaluation
-Strategy recommendation to manage customer churn
+#Feature Selection using ExtraTreesClassifier
+#Handling Class Imbalance using ADASYN
+#Model building
+#Hyperparameter tuning with Cross Validation
+#Model Evaluation
+#Strategy recommendation to manage customer churn
